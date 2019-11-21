@@ -1,0 +1,26 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.main--container {
+  display: flex;
+  flex-flow: row wrap;
+  align-self: auto;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.grab {
+  cursor: grab;
+}
+.grabbing {
+  cursor: grabbing;
+  border: 1px dotted;
+}
+
+@media all and (max-width: 700px) {
+  .main--container {
+    flex-direction: column;
+  }
+}

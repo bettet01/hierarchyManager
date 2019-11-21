@@ -1,0 +1,45 @@
+.cycle--container {
+  width: 90%;
+  background: gray;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 2px;
+}
+
+.test {
+  border: 2px solid black;
+}
+
+.cycle--removebutton {
+  transform: scale(0.023);
+  position: relative;
+  left: 93%;
+  height: 5px;
+  width: 5px;
+}
+
+
+.manager--box-addemployee {
+  display: flex;
+  flex-wrap: wrap;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding: 2px;
+}
+
+.manager--box-addemployee button {
+  position: relative;
+  height: 5px;
+  width: 5px;
+  transform: scale(0.01);
+
+}
+
+.manager--box-addemployee input {
+  border-radius: 5px;
+}
+

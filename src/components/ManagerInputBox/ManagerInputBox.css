@@ -1,0 +1,15 @@
+.manager--input-container {
+  position: fixed;
+  height: 22px;
+  bottom: 0px;
+  background: #dfe3e6;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 3px;
+}
+
+.manager--input-container input {
+  border-radius: 5px;
+}

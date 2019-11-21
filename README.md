@@ -1,2 +1,0 @@
-# hierarchyManager
-Created with CodeSandbox
