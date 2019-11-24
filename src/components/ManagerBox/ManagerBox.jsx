@@ -56,7 +56,7 @@ const ManagerBox = props => {
         />
         <button>{props.addButton}</button>
       </form>
-      <h2 spellcheck="false" onDoubleClick={changeManagerName}>{props.managerName}</h2>
+      <h2 spellCheck="false" onDoubleClick={changeManagerName}>{props.managerName}</h2>
       {Object.keys(props.cycles)
         .map(key => ({ id: key, ...props.cycles[key] }))
         .map(item => {

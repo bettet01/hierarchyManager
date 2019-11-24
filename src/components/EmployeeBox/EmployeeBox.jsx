@@ -29,7 +29,7 @@ const EmployeeBox = props => {
 
   return (
     <div
-      onDouClick={() => changeShowaddition(!showAdditional)}
+      onDoubleClick={() => changeShowaddition(!showAdditional)}
       ref={drag}
       className="employee--container"
     >

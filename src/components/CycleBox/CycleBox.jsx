@@ -71,7 +71,7 @@ const CycleBox = props => {
         <button type="submit">{props.addButton}</button>
       </form>
       <div
-        spellcheck="false"
+        spellCheck="false"
         onDoubleClick={changeCycleName}
         id={props.cycleName}
         ref={drop}
