@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { DndProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
-import axios from 'axios'
+import axios from "axios";
 
 import "./styles.css";
 import ManagerBox from "./components/ManagerBox/ManagerBox";
@@ -12,25 +12,26 @@ import AddButton from "./components/AddButton/AddButton";
 
 function App() {
   // Setting State
-  const [columnValues, setColumnValues] = useState('');
+  const [columnValues, setColumnValues] = useState("");
   const [managerValue, setManagerValue] = React.useState("");
 
   /* Functions i'm planning to prop drill down to needed values */
 
-  const getsavefile = (e) => {
+  const getsavefile = e => {
     e.preventDefault();
     axios({
-      method: 'GET',
-      url: 'http://localhost:3001/getsave',
-      responseType: 'json'
-    }).then(function(res){
-      console.log(res.data)
-      setColumnValues(res.data)
-    }).catch(err => {
-      console.log(err)
+      method: "GET",
+      url: "http://localhost:3001/getsave",
+      responseType: "json"
     })
-  }
-
+      .then(function(res) {
+        console.log(res.data);
+        setColumnValues(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   const addManager = e => {
     e.preventDefault();
@@ -136,7 +137,8 @@ function App() {
     const name = items[1];
     const oldManager = itemName[items[2]];
     const cycleDelete = itemName[items[3]];
-    const add = columnValues[oldManager]["cycles"][cycleDelete]["employees"][name];
+    const add =
+      columnValues[oldManager]["cycles"][cycleDelete]["employees"][name];
     console.log(oldManager);
 
     // TODO: remove employee from old cycle (still need to get old cycle name)
@@ -194,7 +196,7 @@ function App() {
           />
           <div>
             <form onSubmit={getsavefile}>
-              <button type='submit'>Hello</button>
+              <button type="submit">Hello</button>
             </form>
           </div>
         </DndProvider>
